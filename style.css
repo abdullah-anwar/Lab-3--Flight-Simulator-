@@ -8,17 +8,72 @@ body{
     position:absolute;
     height:610px,500px;
     margin:50px;
-     -moz-animation: cloud 10s linear 0s infinite;
+    -moz-animation: cloud 10s linear 0s infinite;
     -webkit-animation: cloud 10s linear 0s infinite;
     animation: cloud 10s linear 0s infinite;
    }
 
+.plane {
 
-#moveControl:checked ~ .plane{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+}
+
+#moveControl ~ div{
+    -webkit-animation: Up 5s; /* Chrome, Safari, Opera */ 
+    animation: Up 5s;
+}
+
+#moveControl:checked ~ div{
     -webkit-animation: Down 5s; /* Chrome, Safari, Opera */ 
     animation: Down 5s;
 }
 
+
+
+
+
+.move{
+    position: absolute;
+    top:100px;
+    left: 1700px;
+
+    padding: 30px;
+    width: 100px;
+    border-radius: 10px;
+    background: #333;
+    text-align: center;
+    color: #fff;
+    font-size: 16px;
+}
+
+input[type=checkbox] {
+   position: absolute;
+   top: 150px;
+   left: 1700px;
+}
+.plane img {
+    height: 100px;
+    width: 200px;
+}
+
+@-webkit-keyframes Down {
+    from {top: 0px;}
+    to {top: 600px;}
+}@keyframes Down {
+    from {top: 0px;}
+    to {top: 600px;}
+}
+
+@-webkit-keyframes Up {
+    from {top: 600px;}
+    to {top: 0px;}
+}@keyframes Up {
+    from {top: 600px;}
+    to {top: 0px;}
+}
 
 @-moz-keyframes cloud {
     from { background-position: 200% 0, 120% 0; }
@@ -34,19 +89,3 @@ body{
 }
 
 
-
-@-webkit-keyframes Down {
-    from {top: 0px;}
-    to {top: 600px;}
-}@keyframes planeMoveUp {
-    from {top: 0px;}
-    to {top: 600px;}
-}
-
-@-webkit-keyframes Up {
-    from {top: 600px;}
-    to {top: 0px;}
-}@keyframes planeMoveUp {
-    from {top: 600px;}
-    to {top: 0px;}
-}
