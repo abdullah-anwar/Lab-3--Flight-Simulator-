@@ -1,0 +1,52 @@
+body{
+	background-color: grey;
+    background-image: url('images/cloud.png'), url('images/cloud1.png');
+    background-repeat:repeat, repeat;
+    background-attachment:fixed;
+    background-size: 20%, 15%, auto;
+    background-position: 25% 25%, 50% 50%;
+    position:absolute;
+    height:610px,500px;
+    margin:50px;
+     -moz-animation: cloud 10s linear 0s infinite;
+    -webkit-animation: cloud 10s linear 0s infinite;
+    animation: cloud 10s linear 0s infinite;
+   }
+
+
+#moveControl:checked ~ .plane{
+    -webkit-animation: Down 5s; /* Chrome, Safari, Opera */ 
+    animation: Down 5s;
+}
+
+
+@-moz-keyframes cloud {
+    from { background-position: 200% 0, 120% 0; }
+    to  { background-position: -100% 0, -90% 0; }
+}
+@-webkit-keyframes cloud {
+    from { background-position: 200% 0, 120% 0; }
+    to  { background-position: -100% 0, -90% 0; }
+}
+@keyframes cloud {
+    from { background-position: 200% 0, 120% 0; }
+    to  { background-position: -100% 0, -90% 0; }
+}
+
+
+
+@-webkit-keyframes Down {
+    from {top: 0px;}
+    to {top: 600px;}
+}@keyframes planeMoveUp {
+    from {top: 0px;}
+    to {top: 600px;}
+}
+
+@-webkit-keyframes Up {
+    from {top: 600px;}
+    to {top: 0px;}
+}@keyframes planeMoveUp {
+    from {top: 600px;}
+    to {top: 0px;}
+}
